@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>scrollTween</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- for detecting screen break points -->
+    <div class="visible-xs"></div><div class="visible-sm"></div><div class="visible-md"></div><div class="visible-lg"></div><div class="visible-xl"></div>
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container" tween-container>
+      <div class="item" style="background-color: yellow;" tween-element ></div>
+      <script type="text/animation" >
+        [{
+          "method": "to",
+          "vars": {
+            "left": "100%",
+            "rotation": 360,
+            "xPercent": -100,
+            "ease": "Linear.easeOut"
+          }
+        },
+        {
+          "method": "to",
+          "vars": {
+            "top": "100%",
+            "scale": 2,
+            "yPercent": -100,
+            "ease": "Linear.easeNone"
+          }
+        },
+        {
+          "method": "to",
+          "vars": {
+            "left": "0%",
+            "rotation": 0,
+            "xPercent": 0,
+            "ease": "Linear.easeNone"
+          }
+        },
+        {
+          "method": "to",
+          "vars": {
+            "top": "0%",
+            "scale": 1,
+            "yPercent": 0,
+            "ease": "Linear.easeIn"
+          }
+        },
+        {
+          "method": "to",
+          "vars": {}
+        }]
+      </script>
+    </div>
+
+    <div class="container" tween-container>
+      <div class="item" style="background-color: red;" tween-element ></div>
+      <script type="text/animation">
+        [{
+          "method": "to",
+          "vars": {
+            "left": "100%",
+            "xPercent": -100,
+            "ease": "Linear.easeNone"
+          },
+          "duration": 4
+        },
+        {
+          "method": "to",
+          "vars": {
+            "top": "100%",
+            "yPercent": -100,
+            "rotation": 360,
+            "ease": "Linear.easeNone"
+          },
+          "duration": 4
+        },
+        {
+          "method": "to",
+          "vars": {},
+          "duration": 2
+        }]
+      </script>
+    </div>
+
+    <div class="container" tween-container>
+      <div class="item" style="background-color: blue;" tween-element ></div>
+      <script type="text/animation">
+        {
+          "method": "to",
+          "vars": {
+            "left": "100%",
+            "top": "100%",
+            "xPercent": -100,
+            "yPercent": -100,
+            "ease": "Linear.easeNone"
+          },
+          "delay": 2,
+          "duration": 4
+        }
+      </script>
+    </div>
+
+    <div class="container" tween-container>
+      <div class="item" style="background-color: purple;" tween-element ></div>
+      <script type="text/animation">
+        {
+          "method": "to",
+          "vars": {
+            "left":
+            "100%",
+            "xPercent": -100
+          }
+        }
+      </script>
+    </div>
+
+    <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+
+</body>
+</html>
